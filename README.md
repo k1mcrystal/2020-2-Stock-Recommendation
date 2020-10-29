@@ -1,12 +1,15 @@
 # 2020-2-Stock-Recommendation
-> Mirae Asset Big Data Festival :: 주식 거래종목 TOP3 예측 프로젝트   
+> Mirae Asset Big Data Festival :: 주식 거래종목 TOP3 예측 프로젝트       
+
 > Feature Engineering + Recommendation Model with Item2Vec + LGBM Regressor with Bayesian Opimization
 
-Members: 김수정, 김지환, 안지훈
+#### Members: 김수정, 김지환, 안지훈
+
 
 ### 0. Project Information
-데이터 설명 : 고객 그룹, 주식 종목, 거래년월을 key값으로 하는 주식 거래 데이터와, 주식 종목을 key값으로 하는 주식 정보 데이터가 있다.     
-목표 : 2019년 7월부터 2020년 6월가지의 데이터를 이용하여, 2020년 7월에 48개의 그룹이 가장 많이 매수할 top3 종목을 예측하기 (그룹마다 3개씩)        
+- 데이터 설명 : 고객 그룹, 주식 종목, 거래년월을 key값으로 하는 주식 거래 데이터와, 주식 종목을 key값으로 하는 주식 정보 데이터가 있다.     
+- 목표 : 2019년 7월부터 2020년 6월가지의 데이터를 이용하여, 2020년 7월에 48개의 그룹이 가장 많이 매수할 top3 종목을 예측하기 (그룹마다 3개씩)        
+    
 
 ### 1. Feature Engineering
 
@@ -19,7 +22,7 @@ Members: 김수정, 김지환, 안지훈
 
 - 지수평활법을 이용하여 새로운 예측 feature 생성    
 (ex. 매수고객수_ES3, 매수고객수_ES6)
-
+    
 
 ### 2. Model 1 : Recommendation Model with Item2Vec
 - 그룹별 매수 종목 시퀀스 생성    
@@ -37,7 +40,7 @@ count matrix와 similarity matrix를 matrix multiplication 하여 주식 종목�
 - model evaluation    
 2020년 6월 데이터를 validation data로 하여 예측 결과와 비교      
 예측력이 낮은 8, 12, 20, 32, 41, 42번 group에 대해 다른 분석방법 적용
-
+    
 
 ### 3. Model 2 : LGBM Regressor with Bayesian Opimization
 - data preprocess    
@@ -46,7 +49,7 @@ Convert data type to category
 Scale data
 
 - LGBM Regressor 적용    
-
+     
 
 ### 4. Final Results
 - Group 8, 12, 20, 32, 41, 42 : result of LGBM Regressor    
