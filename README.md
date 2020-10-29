@@ -45,5 +45,5 @@ Scale data
 
 
 ### 4. Final Results
-Group 8, 12, 20, 32, 41, 42 : result of LGBM Regressor    
-the other groups : result of Item2Vec
+- Group 8, 12, 20, 32, 41, 42 : result of LGBM Regressor    
+- the other groups : result of Item2Vec
